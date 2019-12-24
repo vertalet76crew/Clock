@@ -1,0 +1,73 @@
+.wrap {
+  max-width: 450px;
+  min-height: 450px;
+  margin: 100px auto;
+  background-color: cornsilk;
+  border: 1px solid black;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-board {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 50%;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.arrow-sec,
+.arrow-min,
+.arrow-hours {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+}
+.arrow-sec {
+  width: 1px;
+  height: 150px;
+  transform: translate(-50%, -100%) rotate(45deg);
+}
+.arrow-min {
+  width: 2px;
+  background-color: brown;
+  height: 170px;
+  transform: translate(-50%, -100%) rotate(60deg);
+}
+.arrow-hours {
+  height: 130px;
+  width: 3px;
+  background-color: chocolate;
+  transform: translate(-50%, -100%) rotate(75deg);
+}
+.clock-number {
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform-origin: bottom;
+  font-family: sans-serif;
+}
+.clock-number:nth-child(3) span {
+  transform: rotate(270deg);
+  display: inline-block;
+}
+.clock-number:nth-child(9) span {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.clock-number:nth-child(4) span,
+.clock-number:nth-child(5) span,
+.clock-number:nth-child(6) span,
+.clock-number:nth-child(7) span,
+.clock-number:nth-child(8) span {
+  transform: rotate(180deg);
+  display: inline-block;
+}
